@@ -120,6 +120,7 @@ const firefliesMaterial = new THREE.ShaderMaterial({
   vertexShader: firefliesVertexShader,
   fragmentShader: firefliesFragmentShader,
   transparent: true,
+  blening: THREE.AdditiveBlending,
 });
 
 gui
