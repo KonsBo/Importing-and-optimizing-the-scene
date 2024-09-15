@@ -98,6 +98,16 @@ firefliesGeometry.setAttribute(
   new THREE.BufferAttribute(positionArray, 3)
 );
 
+//Material
+const firefliesMaterial = new THREE.PointsMaterial({
+  size: 0.1,
+  sizeAttenuation: true,
+});
+
+//Points
+const Fireflies = new THREE.Points(firefliesGeometry, firefliesMaterial);
+scene.add(Fireflies);
+
 /**
  * Sizes
  */
