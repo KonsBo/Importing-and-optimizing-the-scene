@@ -104,14 +104,14 @@ firefliesGeometry.setAttribute(
 );
 
 //Material
-const firefliesMaterial = new THREE.PointsMaterial({
-  size: 0.1,
-  sizeAttenuation: true,
+const firefliesMaterial = new THREE.ShaderMaterial({
+  vertexShader: firefliesVertexShader,
+  fragmentShader: firefliesFragmentShader,
 });
 
 //Points
-const Fireflies = new THREE.Points(firefliesGeometry, firefliesMaterial);
-scene.add(Fireflies);
+const fireflies = new THREE.Points(firefliesGeometry, firefliesMaterial);
+scene.add(fireflies);
 
 /**
  * Sizes
